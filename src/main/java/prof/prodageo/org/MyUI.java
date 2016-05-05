@@ -36,10 +36,13 @@ public class MyUI extends UI {
         surname.setCaption("Type your surname here:");
 
         Button button = new Button("Click Me");
+        
+        /*
         button.addClickListener( e -> {
             layout.addComponent(new Label("Thanks " + name.getValue() 
                     + ", it works!"));
         });
+        */
         
         layout.addComponents(name, surname, button);
         layout.setMargin(true);
