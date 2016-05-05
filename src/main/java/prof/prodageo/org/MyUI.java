@@ -55,4 +55,12 @@ public class MyUI extends UI {
     @VaadinServletConfiguration(ui = MyUI.class, productionMode = false)
     public static class MyUIServlet extends VaadinServlet {
     }
+    
+    /*
+    class ClickMeClass
+    {
+            layout.addComponent(new Label("Thanks " + name.getValue() 
+                    + ", it works!"));
+    }
+    */
 }
