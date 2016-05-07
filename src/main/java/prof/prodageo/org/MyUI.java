@@ -37,7 +37,7 @@ public class MyUI extends UI {
     /* https://vaadin.com/docs/-/part/framework/application/application-events.html */
     public class ClickMeClass implements Button.ClickListener
     {
-        void buttonClick(ClickEvent event) 
+        public void buttonClick(ClickEvent event) 
         {
             layout.addComponent(new Label("Thanks " + name.getValue() + ", it works!"));
         }
