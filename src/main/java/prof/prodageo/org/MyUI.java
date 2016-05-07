@@ -60,7 +60,7 @@ public class MyUI extends UI {
         name.setCaption("Type your name here:");
         button = new Button("Click Me");
         ClickMeClass callback = new ClickMeClass() ;
-        
+        button.addClickListener( callback ) ;
         
         /*
         button.addClickListener( e -> {
