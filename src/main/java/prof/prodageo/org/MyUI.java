@@ -24,14 +24,16 @@ import com.vaadin.ui.VerticalLayout;
 @Theme("mytheme")
 @Widgetset("prof.prodageo.org.MyAppWidgetset")
 public class MyUI extends UI {
+        
+        /* 
         final VerticalLayout layout = new VerticalLayout();
         final TextField name = new TextField();
         final TextField surname = new TextField();
         Button button = null ;
-
+        */
+        
     @Override
     protected void init(VaadinRequest vaadinRequest) {
-        /*
         final VerticalLayout layout = new VerticalLayout();
         
         final TextField name = new TextField();
@@ -41,11 +43,12 @@ public class MyUI extends UI {
         surname.setCaption("Type your surname here:");
 
         Button button = new Button("Click Me");
-        */
 
+        /*
         surname.setCaption("Type your surname here:");
         name.setCaption("Type your name here:");
         button = new Button("Click Me");
+        */
         
         /*
         button.addClickListener( e -> {
