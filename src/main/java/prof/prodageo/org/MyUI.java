@@ -59,6 +59,7 @@ public class MyUI extends UI {
 
         surname.setCaption("Type your surname here:");
         name.setCaption("Type your name here:");
+        name.setValue("Type your name here ...")
         button = new Button("Click Me");
         ClickMeClass callback = new ClickMeClass() ;
         button.addClickListener( callback ) ;
