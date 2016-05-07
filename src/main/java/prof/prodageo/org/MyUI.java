@@ -35,7 +35,7 @@ public class MyUI extends UI {
 
     /* explicit callback */
     /* https://vaadin.com/docs/-/part/framework/application/application-events.html */
-    class ClickMeClass implements Button.ClickListener
+    public class ClickMeClass implements Button.ClickListener
     {
         void buttonClick(ClickEvent event) 
         {
