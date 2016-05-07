@@ -8,6 +8,7 @@ import com.vaadin.annotations.Widgetset;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.server.VaadinServlet;
 import com.vaadin.ui.Button;
+import com.vaadin.ui.Button.ClickListener;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.TextField;
@@ -25,15 +26,25 @@ import com.vaadin.ui.VerticalLayout;
 @Widgetset("prof.prodageo.org.MyAppWidgetset")
 public class MyUI extends UI {
         
-        /* 
+        
         final VerticalLayout layout = new VerticalLayout();
         final TextField name = new TextField();
         final TextField surname = new TextField();
         Button button = null ;
-        */
+        
+
+    /* explicit callback */
+    class ClickMeClass implements Button.ClickListener
+    {
+        void buttonClick(Button.ClickEvent event) 
+        {
+            layout.addComponent(new Label("Thanks " + name.getValue() + ", it works!"));
+        }
+    }
         
     @Override
     protected void init(VaadinRequest vaadinRequest) {
+        /*
         final VerticalLayout layout = new VerticalLayout();
         
         final TextField name = new TextField();
@@ -43,12 +54,13 @@ public class MyUI extends UI {
         surname.setCaption("Type your surname here:");
 
         Button button = new Button("Click Me");
+        */
 
-        /*
         surname.setCaption("Type your surname here:");
         name.setCaption("Type your name here:");
         button = new Button("Click Me");
-        */
+        ClickMeClass callback = new ClickMeClass() ;
+        
         
         /*
         button.addClickListener( e -> {
@@ -69,11 +81,5 @@ public class MyUI extends UI {
     public static class MyUIServlet extends VaadinServlet {
     }
     
-    /* retrait de layout
-    class ClickMeClass
-    {
-            addComponent(new Label("Thanks " + name.getValue() 
-                    + ", it works!"));
-    }
-    */
+
 }
