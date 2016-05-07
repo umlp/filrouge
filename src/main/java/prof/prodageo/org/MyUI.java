@@ -56,10 +56,10 @@ public class MyUI extends UI {
     public static class MyUIServlet extends VaadinServlet {
     }
     
-    /*
+    /* retrait de layout
     class ClickMeClass
     {
-            layout.addComponent(new Label("Thanks " + name.getValue() 
+            addComponent(new Label("Thanks " + name.getValue() 
                     + ", it works!"));
     }
     */
